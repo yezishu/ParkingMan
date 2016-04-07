@@ -1,0 +1,53 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="status_height">25dp</dimen>
+
+    <dimen name="size2">2dp</dimen>
+    <dimen name="size4">4dp</dimen>
+    <dimen name="size6">6dp</dimen>
+    <dimen name="size8">8dp</dimen>
+    <dimen name="size10">10dp</dimen>
+    <dimen name="size12">12dp</dimen>
+    <dimen name="size14">14dp</dimen>
+    <dimen name="size16">16dp</dimen>
+    <dimen name="size18">18dp</dimen>
+    <dimen name="size20">20dp</dimen>
+    <dimen name="size22">22dp</dimen>
+    <dimen name="size24">24dp</dimen>
+    <dimen name="size26">26dp</dimen>
+    <dimen name="size28">28dp</dimen>
+
+
+
+    <!--
+    material 对话框的标准
+    Button width and padding
+    Button height: 36dp
+    Minimum button width: 64dp
+    Internal button padding: 8dp
+    Padding between buttons: 8dp
+    Dialog content bottom padding: 24dp
+    Padding between title and body text: 20dp
+    Action area height: 52dp
+    Dialog elevation: 24dp-->
+    <!--对话框-->
+    <dimen name="dialog_btn_size">36dp</dimen>
+    <dimen name="btn_margin">8dp</dimen>
+    <dimen name="dialog_elevation">24dp</dimen>
+    
+    <!--dialog标题栏字号-->
+    <dimen name="textSize_title">20sp</dimen>
+    <!--dialog标题栏按钮字号-->
+    <dimen name="textSize_title_btn">14sp</dimen>
+
+    <dimen name="fab_size">56dp</dimen>
+
+
+    <!--滑动菜单最小高度-->
+    <dimen name="slider_minHei">110dp</dimen>
+    <dimen name="slider_initHei">138dp</dimen>
+</resources>

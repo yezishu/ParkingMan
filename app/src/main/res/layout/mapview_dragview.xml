@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dragView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="false"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/markinfo_top"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/slider_minHei"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:layout_marginTop="@dimen/size28"
+                android:layout_marginBottom="@dimen/size28"
+                android:alpha="0.8"
+                app:cardElevation="@dimen/size8"
+                app:cardCornerRadius="@dimen/size6"
+                app:cardBackgroundColor="@color/colorPrimary">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/size24"
+                    android:paddingRight="@dimen/size24"
+                    android:paddingTop="@dimen/size24" >
+
+                    <RelativeLayout
+                        android:id="@+id/name_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/parking_name"
+                            style="@style/text_style_title"
+                            android:maxWidth="240dp"
+                            android:lines="1"
+                            android:text="fdffffffffffffffffffffffffffffffffffffff" />
+
+                        <TextView
+                            style="@style/text_style_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:text="10公里"
+                            android:textColor="@android:color/white" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_adname"
+                        style="@style/text_style_content"
+                        android:layout_below="@+id/name_view"
+                        android:text="@string/app_name"
+                        android:textColor="@android:color/primary_text_dark" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <com.parkingman.views.CircularRevealFab
+                android:id="@+id/fab"
+                android:layout_width="@dimen/fab_size"
+                android:layout_height="@dimen/fab_size"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/fab_margin"
+                android:scaleType="centerCrop"
+                app:elevation="@dimen/size14"
+                android:src="@drawable/ico_navigation_white" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/backGround"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_style_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size28"
+                android:text="@string/app_name" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

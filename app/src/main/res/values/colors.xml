@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2e4cae</color>
+    <color name="colorPrimaryDark">#243d90</color>
+    <color name="colorAccent">#00a3f3</color>
+
+    <color name="colorPrimary_al">#222e4cae</color>
+    <color name="colorAccent_al">#2200a3f3</color>
+
+    <color name="statusColor">#883D4751</color>
+    <color name="testColor">#3D4751</color>
+    <color name="text_hint">#cbcbcb</color>
+    <color name="test">#ffaa00</color>
+</resources>
