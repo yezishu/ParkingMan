@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ParkingMan.iml" filepath="$PROJECT_DIR$/ParkingMan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ParkingManGit.iml" filepath="$PROJECT_DIR$/ParkingManGit.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/circualreveal/circualreveal.iml" filepath="$PROJECT_DIR$/circualreveal/circualreveal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rxjatest/rxjatest.iml" filepath="$PROJECT_DIR$/rxjatest/rxjatest.iml" />
     </modules>
   </component>
 </project>
