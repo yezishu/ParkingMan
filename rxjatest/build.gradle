@@ -36,4 +36,5 @@ dependencies {
     compile rootProject.ext.dependencies["retrofit-gson"]
     compile rootProject.ext.dependencies["retrofit-rxja"]
 
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
 }

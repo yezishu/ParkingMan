@@ -29,7 +29,7 @@ public class RxjaTest extends BaseActivity {
         startActivity(new Intent(this,NetActivity.class));}
 
     @OnClick(R.id.btn_netSafe)void toNetSafe(){
-        startActivity(new Intent(this,NetSafeActivity.class));}
+        startActivity(new Intent(this,BusActivity.class));}
 
 
     @Override

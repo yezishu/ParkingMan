@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.parkingman.rxjatest.Net.ParkService;
 import com.parkingman.rxjatest.Net.ServiceGenerator;
+import com.parkingman.rxjatest.bus.RxBus;
 
 import butterknife.ButterKnife;
 import rx.Subscription;
@@ -21,7 +22,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     public static ParkService parkService= ServiceGenerator.createService(ParkService.class);
 
     private CompositeSubscription compositeSubscription;
-
     /**
      * 获取 订阅集合
      * @return 订阅集合
@@ -31,7 +31,6 @@ public abstract class BaseActivity extends AppCompatActivity {
             this.compositeSubscription=new CompositeSubscription();
         return this.compositeSubscription;
     }
-
     /**
      * 添加订阅 到订阅集合
      * @param subscription subscription
@@ -41,6 +40,16 @@ public abstract class BaseActivity extends AppCompatActivity {
             this.compositeSubscription=new CompositeSubscription();
         this.compositeSubscription.add(subscription);
     }
+
+
+    private RxBus rxBus;
+    public RxBus getRxBusSingleton(){
+        if (rxBus==null)
+            rxBus=new RxBus();
+        return rxBus;
+    }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

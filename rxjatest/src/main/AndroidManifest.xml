@@ -23,7 +23,11 @@
         <activity android:name=".MoreActivity"/>
         <activity android:name=".LambdaActivity"/>
         <activity android:name=".NetActivity"/>
-        <activity android:name=".NetSafeActivity"/>
+        <activity android:name=".BusActivity"/><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
     </application>
 
 </manifest>

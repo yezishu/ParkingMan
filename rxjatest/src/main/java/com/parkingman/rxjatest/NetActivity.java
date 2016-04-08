@@ -26,22 +26,24 @@ public class NetActivity extends BaseActivity {
 
     @Bind(R.id.tv) TextView tv;
 
-
     @Override
-    protected int setViewLayout() {return R.layout.activity_net;}
+    protected int setViewLayout() {
+        return R.layout.activity_net;
+    }
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Subscription s= Observable.just(getCommand())
+        Subscription s = Observable.just(getCommand())
                 .flatMap(parkService::alterPark)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .map(ParkModel::toString)
                 .subscribe(tv::setText, this::loadError);
         addSubscription(s);
+
     }
 
 
@@ -50,8 +52,8 @@ public class NetActivity extends BaseActivity {
     }
 
 
-    private ParkCommand getCommand(){
-        ParkCommand command=new ParkCommand();
+    private ParkCommand getCommand() {
+        ParkCommand command = new ParkCommand();
         command.setParkID("45O9I750G9");
         command.setParkName("AAAA测试停车场");
         command.setAddress("湖滨南路66号");
@@ -66,16 +68,16 @@ public class NetActivity extends BaseActivity {
         command.setPrice(new BigDecimal(2.0));
         command.setRemark("ceshi");
 
-        ParkCommand.ParkDetailCommand detailModel=new ParkCommand.ParkDetailCommand();
+        ParkCommand.ParkDetailCommand detailModel = new ParkCommand.ParkDetailCommand();
         detailModel.setTitle("白天 7:00-18:00");
 
 
-        ParkCommand.ParkDetailParamsCommand params=new ParkCommand.ParkDetailParamsCommand();
+        ParkCommand.ParkDetailParamsCommand params = new ParkCommand.ParkDetailParamsCommand();
         params.setParam("323");
         params.setParamValue("ceshi");
 
-        List<ParkCommand.ParkDetailParamsCommand> paramses=new ArrayList<>();
-        List<ParkCommand.ParkDetailCommand> parkDetailCommands=new ArrayList<>();
+        List<ParkCommand.ParkDetailParamsCommand> paramses = new ArrayList<>();
+        List<ParkCommand.ParkDetailCommand> parkDetailCommands = new ArrayList<>();
         paramses.add(params);
         detailModel.setParams(paramses);
 
@@ -83,4 +85,6 @@ public class NetActivity extends BaseActivity {
         command.setParkDetailCommands(parkDetailCommands);
         return command;
     }
+
+
 }
