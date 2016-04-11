@@ -4,9 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.parkingman.rxjatest.base.BaseActivity;
-import com.parkingman.rxjatest.bus.RxBus;
-
-import butterknife.OnClick;
+import com.parkingman.rxjatest.busFragment.ReceiveFragment;
+import com.parkingman.rxjatest.busFragment.SendFragment;
 
 /**
  * Des：
@@ -15,16 +14,18 @@ import butterknife.OnClick;
 public class BusActivity extends BaseActivity {
 
     @Override
-    protected int setViewLayout() {return R.layout.activity_netsafe;}
-
-    private RxBus rxBus;
-
-    @OnClick(R.id.btn)public void clickEven(){}
-
+    protected int setViewLayout() {return R.layout.activity_bus;}
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        rxBus=getRxBusSingleton();
+
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.sendFragment,new SendFragment())
+                .replace(R.id.receiveFragment,new ReceiveFragment())
+                .commit();
+
     }
+
+    public static class TapEvent{}
 }
